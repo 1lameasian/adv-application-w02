@@ -1,0 +1,39 @@
+# Program Name: Assignment1.py
+# Course: IT3883/Section W02
+# Student Name: Richard Phay
+# Assignment Number: Lab#1
+# Due Date: 01/27/2025
+# Purpose: What does the program do (in a few sentences)? This program shows a user a text-based menu.
+# Purpose Part 2: The program also allows for the user to interact with an input buffer.
+# List Specific resources used to complete the assignment:
+
+def main():
+    inputBuffer = ""
+
+    while True:
+        print("\nMenu:")
+        print("Option 1: Append data to the input buffer")
+        print("Option 2: Clear the input buffer")
+        print("Option 3: Display the input buffer")
+        print("Option 4: Exit")
+
+        userInput = input("I pick option: ")
+
+        if userInput == "1":
+            userData = input("Enter a string to append: ")
+            inputBuffer += userData
+            print("Data has successfully been appended.")
+        elif userInput == "2":
+            inputBuffer = ""
+            print("The input buffer has been cleared.")
+        elif userInput == "3":
+            print(inputBuffer)
+        elif userInput == "4":
+            print("Program will now be exited.")
+            break
+        else:
+            print("That is not a valid option, please try again: ")
+
+
+if __name__ == "__main__":
+    main()
